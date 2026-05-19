@@ -282,38 +282,6 @@ ul {
   color: var(--white);
 }
 
-/* About */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  width: 100%;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-}
-
-.about-list li {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.about-list li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--primary);
-}
-
-.about-img img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
 /* Projects */
 .projects-grid {
   display: grid;
@@ -538,5 +506,227 @@ footer {
   .btn {
     padding: 0.7rem 1.25rem;
     font-size: 0.9rem;
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 TÍTULO DE SECCIÓN CON SUBRAYADO */
+/* ═════════════════════════════════════════════════════════════ */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 WRAPPER DE SOBRE MÍ (GRID) */
+/* ═════════════════════════════════════════════════════════════ */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 TEXTO Y SUBTÍTULO */
+/* ═════════════════════════════════════════════════════════════ */
+.about-subtitle {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.about-text p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 ESTADÍSTICAS VISUALES */
+/* ═════════════════════════════════════════════════════════════ */
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1.8rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.3rem;
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 TAGS DE HABILIDADES */
+/* ═════════════════════════════════════════════════════════════ */
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.2rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.about-tags li {
+  background: var(--bg-light);
+  padding: 0.45rem 0.95rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.about-tags li:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 BOTONES DE ACCIÓN */
+/* ═════════════════════════════════════════════════════════════ */
+.about-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 IMAGEN CON EFECTOS */
+/* ═════════════════════════════════════════════════════════════ */
+.about-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 RESPONSIVE PARA SOBRE MÍ */
+/* ═════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-image-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .about-stats {
+    justify-content: flex-start;
+  }
+
+  .about-cta {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .about-stats {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .about-tags {
+    justify-content: center;
+  }
+
+  .about-cta {
+    justify-content: center;
+  }
+
+  .about-image-container {
+    max-width: 240px;
+  }
+
+  .about-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    bottom: -10px;
+    right: 10px;
   }
 }
