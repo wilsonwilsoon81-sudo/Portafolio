@@ -2,7 +2,7 @@
 
 Desarrollador Web Frontend Junior especializado en JavaScript, Git y APIs REST, con enfoque en soluciones accesibles, seguras y escalables para AgroTech y Ciberseguridad.
 
-🔗 **Live Demo:** [https://wilsonwilsoon81-sudo.github.io/Portafolio/](https://wilsonwilsoon81-sudo.github.io/Portafolio/) _(activar GitHub Pages)_  
+🔗 **Live Demo:** [https://wilsonwilsoon81-sudo.github.io/Portafolio/](https://wilsonwilsoon81-sudo.github.io/Portafolio/)  
 📂 **Repositorio:** [github.com/wilsonwilsoon81-sudo/Portafolio](https://github.com/wilsonwilsoon81-sudo/Portafolio)
 
 ---
