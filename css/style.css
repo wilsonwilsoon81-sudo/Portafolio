@@ -377,12 +377,27 @@ ul {
   letter-spacing: 0.5px;
 }
 
-.project-desc {
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 DESCRIPCIONES DE PROYECTOS - PÁRRAFOS SEPARADOS */
+/* ═════════════════════════════════════════════════════════════ */
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* Espacio entre cada párrafo */
+  margin-bottom: 1.5rem;
+}
+
+.project-detail {
+  margin: 0;
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
-  flex-grow: 1; /* Empuja los botones hacia abajo */
+}
+
+.project-detail strong {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* Botones del proyecto */
