@@ -829,3 +829,31 @@ footer {
     right: 10px;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════ */
+/* 🔹 ICONOS DE CONTACTO EN NAVBAR (NUEVO) */
+/* ═════════════════════════════════════════════════════════════ */
+.nav-contact {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-contact:hover {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+/* Ajuste responsive para que los iconos se vean bien en el menú móvil */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .nav-contact {
+    font-size: 1.5rem;
+  }
+}
